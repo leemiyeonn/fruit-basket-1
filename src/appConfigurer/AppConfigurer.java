@@ -20,12 +20,12 @@ public class AppConfigurer {
         return new Cart();
     }
 
-    public Menu menu() {
-        return new Menu(productRepository().getFruits());
+    public Menu menu(ArrayList<Fruit> fruits) {
+        return new Menu(fruits);
     }
 
-    public Order order() {
-        return new Order(cart());
+    public Order order(Cart cart) {
+        return new Order(cart);
     }
 
 
